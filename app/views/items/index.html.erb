@@ -1,0 +1,15 @@
+<h1> Item List</h1>
+
+<% @items.each do |item| %>
+    <div>
+        <h3><%= link_to item.name, item %></h3>
+        <ul>
+            <li><%= item.description %></li>
+            <li><%= item.category %></li>
+        </ul>
+    </div>
+    
+<% end %>
+
+
+<%= button_to "new listing", new_item_path, method: :get%>

@@ -1,0 +1,9 @@
+<h1> Are you a returning user</h1>
+
+
+<h2>Register</h2>
+<%= button_to "sign up", new_user_path, method: :get %>
+
+<% @users.items do |u|%>
+    <%= u.name%>
+<%end%>

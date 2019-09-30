@@ -1,0 +1,20 @@
+<h2>Edit My Account</h2>
+
+<%= form_for @user do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.label "style Preferance" %>
+    <%= f.text_field :preference %>
+
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+
+    <%= f.submit%>
+
+<% end %>
+
+<%= button_to "back", user_path, method: :get %>

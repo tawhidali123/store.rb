@@ -1,0 +1,10 @@
+
+
+<h1><%= @item.name%></h1>
+<p><%= @item.description%></p>
+<p><%= @item.category%></p>
+
+<%= button_to "edit", edit_item_path, method: :get %>
+<br>
+<%= button_to "back", items_path, method: :get %>
+

@@ -1,5 +1,9 @@
 <h1>Welcome <%= @user.name %></h1>
 
+<% @items.each do |u|%>
+   <p><%= link_to u.name, item_path%></p> 
+<%end%>
+
 <%= button_to "Edit my account", edit_user_path, method: :get %>
 <br>
 <%= button_to "See listings", items_path, method: :get %>

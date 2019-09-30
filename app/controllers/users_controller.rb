@@ -2,11 +2,11 @@ class UsersController < ApplicationController
 
     def index
         @users = User.all
-        
     end
 
     def show
         @user = find_me
+        @items = Item.all
     end
 
     def new

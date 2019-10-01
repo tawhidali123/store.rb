@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ .indexItem{
+     border-style: outset;
+     margin-top: 2em;
+     text-align: center;
+ }

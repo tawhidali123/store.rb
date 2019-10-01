@@ -1,15 +1,28 @@
-<h1> Item List</h1>
-
-<% @items.each do |item| %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
     <div>
-        <h3><%= link_to item.name, item %></h3>
-        <ul>
-            <li><%= item.description %></li>
-            <li><%= item.category %></li>
-        </ul>
+        <h1> Item List</h1>
+
+        <% @items.each do |item| %>
+            <div class = "indexItem">
+                <h3><%= link_to item.name, item %></h3>
+                <ul>
+                    <li><%= item.description %></li>
+                    <li><%= item.category %></li>
+                </ul>
+                <img src="<%= item.image %>" alt="<%= item.name %>"> 
+            </div>
+            
+        <% end %>
+        
+        <%= button_to "new listing", new_item_path, method: :get%>
     </div>
-    
-<% end %>
-
-
-<%= button_to "new listing", new_item_path, method: :get%>
+</body>
+</html>

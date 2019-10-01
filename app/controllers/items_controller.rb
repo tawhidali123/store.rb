@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
     def show
         @item = find_me
+        # @user = User.find()
     end
 
     def new
@@ -40,8 +41,12 @@ class ItemsController < ApplicationController
         Item.find(params[:id])
     end
 
+    # def find_user
+        
+    # end
+
     def permission
-        params.require(:item).permit(:name, :category, :description)
+        params.require(:item).permit(:name, :category, :description, :image)
     end
 
 end

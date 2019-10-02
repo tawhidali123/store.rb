@@ -9,6 +9,7 @@ class UsersController < ApplicationController
         @items = @user.items
         @shops = @user.shops
         
+        
     end
 
     def new

@@ -17,9 +17,9 @@ class ShopsController < ApplicationController
     end
 
     def create
-        byebug
-        shop = Shop.create(params.require(:shop).permit(:user, :item))
         # byebug
+        shop = Shop.create(params.require(:shop).permit(:user_id, :item_id))
+        byebug
         redirect_to user_path(shop.user_id)
         
     end
@@ -31,7 +31,9 @@ class ShopsController < ApplicationController
     end
 
     def destroy
-        shop = Shop.find(params[:id])
+        byebug
+
+        shop = Shop.find_by(id: params[:id])
         Shop.delete(shop)
         redirect_to new_shop_path
     end

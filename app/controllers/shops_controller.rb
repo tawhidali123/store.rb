@@ -17,7 +17,8 @@ class ShopsController < ApplicationController
     end
 
     def create
-        shop = Shop.create(params.require(:shop).permit(:user_id, :item_id))
+        byebug
+        shop = Shop.create(params.require(:shop).permit(:user, :item))
         # byebug
         redirect_to user_path(shop.user_id)
         

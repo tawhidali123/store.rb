@@ -1,0 +1,10 @@
+
+<%= form_for @shop do |f|%>
+    <%= f. label :user_id%>
+    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+
+    <%= f.label :item_id%>
+    <%= f.collection_select(:item_id, Item.all, :id, :name)%>
+
+    <%= f.submit "Put in my bag"%>
+<%end%>

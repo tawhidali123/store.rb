@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 
     def show
         @user = find_me
-        @items = Item.all
+        @items = @user.items
+        @shops = @user.shops
+        
     end
 
     def new

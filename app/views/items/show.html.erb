@@ -1,15 +1,33 @@
 
 
-<h1><%= @item.name%></h1>
-<p><%= @item.description%></p>
-<p><%= @item.category%></p>
-<img src="<%= @item.image%>" alt="<%= @item.name%>">
+<div class="container">
 
-<%= button_to "edit", edit_item_path, method: :get %>
-<br>
-<%= button_to "Show all Listing", items_path, method: :get %>
-<br>
+    <div class="row bounce-in-left">
+        <h1><%= @item.name%></h1>
+    </div>
 
+    <div class="row">
+        <div class="col bounce-in-left">
+            <p><%= @item.description%></p>
+        </div>
+        
+        <div class="col bounce-in-left">
+            <p><%= @item.category%></p>
+        </div>
+    </div>
 
+    <div class="row fade-in">
+        <img src="<%= @item.image%>" alt="<%= @item.name%>">
+    </div>
+
+    <div class="row">
+       <%= button_to "edit", edit_item_path, method: :get %>
+        <br>
+        <%= button_to "Show all Listing", items_path, method: :get %>
+        <br>
+        <%= button_to "new listing", new_item_path, method: :get%>
+    </div>
+    
+</div>
 
 

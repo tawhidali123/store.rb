@@ -11,6 +11,9 @@ class ShopsController < ApplicationController
     
     
     def new
+        # byebug
+        @user = User.find(params[:user_id])
+        # byebug
         @shop = Shop.new
         # @items = Item.all
         # @users = User.all

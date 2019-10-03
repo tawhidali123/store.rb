@@ -41,6 +41,7 @@ class ItemsController < ApplicationController
         Item.find(params[:id])
     end
 
+
     # def find_user
         
     # end

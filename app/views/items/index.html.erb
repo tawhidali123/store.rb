@@ -1,30 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1> Item List</h1>
 
-        <% @items.each do |item| %>
-            <div class = "indexItem">
-                <h3><%= link_to item.name, item %></h3>
-                <ul>
-                    <li><%= item.description %></li>
-                    <li><%= item.category %></li>
-                </ul>
-                <img src="<%= item.image %>" alt="<%= item.name %>"> 
-            </div>
-            
-        <% end %>
+<div class="container">
+
+  <div class="row tracking-in-expand">
+      <h1> Item List</h1>
+  </div>
+
+  <div class="row">
+
+    <% @items.each do |item| %>
+        <div class = "col text-center bounce-in-left">
+            <h3><%= link_to item.name, item %></h3>
+            <ul>
+                <li><%= item.description %></li>
+                <li><%= item.category %></li>
+            </ul>
+            <img src="<%= item.image %>" alt="<%= item.name %>"> 
+        </div>
         
-        <%= button_to "new listing", new_item_path, method: :get%>
-        <br>
-        <%= button_to "See My Cart", users_path, method: :get%>
-    </div>
-</body>
-</html>
+    <% end %>
+
+  </div>
+
+  <div class="row">
+    <%= button_to "Back To home", users_path, method: :get%>
+  </div>
+
+</div>
